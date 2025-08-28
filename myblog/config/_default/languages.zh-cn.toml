@@ -1,0 +1,21 @@
+languageCode = "zh-cn"
+languageName = "简体中文"
+weight = 4
+title = "Cavin Lau's Blog"
+
+[params]
+  displayName = "简体中文"
+  isoCode = "zh-cn"
+  rtl = false
+  dateFormat = "2006-01-02"
+  logo = "img/blowfish_logo_transparent.png"
+  description = "Cavin 的个人博客，记录技术与思考。"
+
+[params.author]
+  name = "Cavin Lau"
+  image = "img/blowfish_logo.png"
+  headline = "记录架构、后端与系统设计。"
+  bio = "专注后端与架构实践，分享所见所思。"
+  links = [
+    { github = "https://github.com/clau224" }
+  ]

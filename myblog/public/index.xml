@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cavin Lau&#39;s Blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Cavin Lau&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>© 2025 Cavin Lau</copyright>
+    <lastBuildDate>Wed, 27 Aug 2025 23:37:54 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>做技术选型时，我们该如何评估中间件？</title>
+      <link>http://localhost:1313/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/</link>
+      <pubDate>Wed, 27 Aug 2025 23:37:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/</guid>
+      <description>在加入L团队后，我负责了一个多路召回的技术设计，主要对Milvus做了技术选型和评估，但部分过程与结论不被团队所认可。这也让我开始思考一个问题&amp;hellip;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/cover.jpg" />
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Tue, 26 Aug 2025 23:37:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description>&lt;p&gt;## 简介&lt;/p&gt;
+&lt;p&gt;这是 &lt;strong&gt;粗体&lt;/strong&gt; 文本，这是 &lt;em&gt;斜体&lt;/em&gt; 文本。&lt;/p&gt;
+&lt;p&gt;访问 &lt;a
+  href=&#34;https://gohugo.io&#34;
+    target=&#34;_blank&#34;
+  &gt;Hugo&lt;/a&gt; 网站！&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>http://localhost:1313/posts/1%E4%B8%9A%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8E%E5%8F%AC%E5%9B%9E%E7%B3%BB%E7%BB%9F%E4%BB%B7%E5%80%BC/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/1%E4%B8%9A%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8E%E5%8F%AC%E5%9B%9E%E7%B3%BB%E7%BB%9F%E4%BB%B7%E5%80%BC/</guid>
+      <description>&lt;p&gt;在加入LineMan之后，我负责的是多路召回这部分。多路召回是干啥的呢？简单来说，当我们打开类似美团的外卖app，在无关键字检索的情况下，首页需要展示推荐餐厅。那么，都展示哪些餐厅呢，凭什么把它们展示出来呢？这就涉及到多路召回的逻辑了。&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

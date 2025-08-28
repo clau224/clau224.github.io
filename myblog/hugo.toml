@@ -1,0 +1,25 @@
+baseURL = 'https://clau224.github.io'
+languageCode = 'zh-CN'
+title = "Cavin Lau's Blog"
+theme = 'blowfish'
+
+mainSections = ["posts"]
+
+[homepage]
+  showRecent = true
+  showRecentItems = 5
+  showMoreLink = true
+  showMoreLinkDest = "/posts/"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    pageRef = "/posts"
+    weight = 10
+
+[article]
+  showTableOfContents = true
+  showReadingTime = true
+  showWordCount = true
+  showHero = false
+  showBreadcrumbs = false
