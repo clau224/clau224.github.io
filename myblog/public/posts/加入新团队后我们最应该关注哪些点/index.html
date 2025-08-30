@@ -140,7 +140,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1590"
+    "wordCount": "3543"
   }]
   </script>
 
@@ -624,7 +624,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <span title="预计阅读">4 分钟</span><span class="px-2 text-primary-500">&middot;</span>
+      <span title="预计阅读">8 分钟</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -822,18 +822,24 @@
     </li>
     <li><a href="#从服务角度优先摸透哪些关键实现">从服务角度，优先摸透哪些关键实现？</a>
       <ul>
-        <li><a href="#p0服务整体架构">[P0]服务整体架构</a></li>
-        <li><a href="#p0启动与初始化流程">[P0]启动与初始化流程</a></li>
-        <li><a href="#p0top1关键业务链路">[P0]Top1关键业务链路</a></li>
-        <li><a href="#p1配置系统">[P1]配置系统</a></li>
-        <li><a href="#p1top5核心业务链路">[P1]Top5核心业务链路</a></li>
-        <li><a href="#p2数据交互">[P2]数据交互</a></li>
-        <li><a href="#p2异常机制">[P2]异常机制</a></li>
-        <li><a href="#p2监控日志埋点">[P2]监控/日志埋点</a></li>
+        <li><a href="#服务整体架构">服务整体架构</a></li>
+        <li><a href="#启动与初始化流程">启动与初始化流程</a></li>
+        <li><a href="#top1关键业务链路">Top1关键业务链路</a></li>
+        <li><a href="#配置系统">配置系统</a></li>
+        <li><a href="#数据交互">数据交互</a></li>
+        <li><a href="#异常机制">异常机制</a></li>
+        <li><a href="#监控日志埋点">监控/日志埋点</a></li>
       </ul>
     </li>
-    <li><a href="#从业务角度优先拿捏哪些产品细节">从业务角度，优先拿捏哪些产品细节？</a></li>
-    <li><a href="#从团队风格角度如何快速感知价值导向">从团队风格角度，如何快速感知价值导向？</a></li>
+    <li><a href="#从业务角度优先关注哪些产品细节">从业务角度，优先关注哪些产品细节？</a>
+      <ul>
+        <li><a href="#核心业务流程">核心业务流程</a></li>
+        <li><a href="#异常业务流程">异常业务流程</a></li>
+        <li><a href="#核心业务指标">核心业务指标</a></li>
+        <li><a href="#核心体验指标">核心体验指标</a></li>
+        <li><a href="#成本指标">成本指标</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -861,18 +867,24 @@
     </li>
     <li><a href="#从服务角度优先摸透哪些关键实现">从服务角度，优先摸透哪些关键实现？</a>
       <ul>
-        <li><a href="#p0服务整体架构">[P0]服务整体架构</a></li>
-        <li><a href="#p0启动与初始化流程">[P0]启动与初始化流程</a></li>
-        <li><a href="#p0top1关键业务链路">[P0]Top1关键业务链路</a></li>
-        <li><a href="#p1配置系统">[P1]配置系统</a></li>
-        <li><a href="#p1top5核心业务链路">[P1]Top5核心业务链路</a></li>
-        <li><a href="#p2数据交互">[P2]数据交互</a></li>
-        <li><a href="#p2异常机制">[P2]异常机制</a></li>
-        <li><a href="#p2监控日志埋点">[P2]监控/日志埋点</a></li>
+        <li><a href="#服务整体架构">服务整体架构</a></li>
+        <li><a href="#启动与初始化流程">启动与初始化流程</a></li>
+        <li><a href="#top1关键业务链路">Top1关键业务链路</a></li>
+        <li><a href="#配置系统">配置系统</a></li>
+        <li><a href="#数据交互">数据交互</a></li>
+        <li><a href="#异常机制">异常机制</a></li>
+        <li><a href="#监控日志埋点">监控/日志埋点</a></li>
       </ul>
     </li>
-    <li><a href="#从业务角度优先拿捏哪些产品细节">从业务角度，优先拿捏哪些产品细节？</a></li>
-    <li><a href="#从团队风格角度如何快速感知价值导向">从团队风格角度，如何快速感知价值导向？</a></li>
+    <li><a href="#从业务角度优先关注哪些产品细节">从业务角度，优先关注哪些产品细节？</a>
+      <ul>
+        <li><a href="#核心业务流程">核心业务流程</a></li>
+        <li><a href="#异常业务流程">异常业务流程</a></li>
+        <li><a href="#核心业务指标">核心业务指标</a></li>
+        <li><a href="#核心体验指标">核心体验指标</a></li>
+        <li><a href="#成本指标">成本指标</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -1064,7 +1076,7 @@
     
 </h3>
 <ul>
-<li>代码工具：代码平台是哪个。</li>
+<li>代码工具：代码平台是哪个，gitlab/github/搭建内部平台。</li>
 <li>审核流程：提MR是在什么环节节点提出，MR审核周期是多少。</li>
 <li>审核规范：是否有约定俗称的checklist。如何定义好的审核。是否有千行评论等团队要求。</li>
 <li>审核人：MR必须经过哪些角色审批。</li>
@@ -1127,7 +1139,7 @@
 </h3>
 <ul>
 <li>迭代周期：迭代周期是多少，迭代进展会是什么时候；需求评审会是什么时候；周会是什么时候；还有其他什么会。</li>
-<li>工作项管理：需求-任务怎么分层；有哪些关键字段会影响团队协作；哪些关键字段影响团队绩效。</li>
+<li>工作项管理：需求-任务怎么分层；有哪些关键字段会影响团队协作；哪些关键字段影响团队考核。</li>
 </ul>
 
 <h2 class="relative group">从服务角度，优先摸透哪些关键实现？ 
@@ -1140,105 +1152,178 @@
     
 </h2>
 
-<h3 class="relative group">[P0]服务整体架构 
-    <div id="p0服务整体架构" class="anchor"></div>
+<h3 class="relative group">服务整体架构 
+    <div id="服务整体架构" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p0%e6%9c%8d%e5%8a%a1%e6%95%b4%e4%bd%93%e6%9e%b6%e6%9e%84" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%9c%8d%e5%8a%a1%e6%95%b4%e4%bd%93%e6%9e%b6%e6%9e%84" aria-label="锚点">#</a>
     </span>        
     
 </h3>
+<p>按照过往经验，一般按照五视图法就能宏观了解整个系统。五视图分别是指逻辑架构、开发架构、运行架构、物理架构和数据架构。
+如果团队没有全部视图，至少应该和团队成员讨论下运行架构，也就是服务的上下游调用关系，除了常规的Http/rpc调用，还会涉及MQ事件、定时任务。</p>
 
-<h3 class="relative group">[P0]启动与初始化流程 
-    <div id="p0启动与初始化流程" class="anchor"></div>
+<h3 class="relative group">启动与初始化流程 
+    <div id="启动与初始化流程" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p0%e5%90%af%e5%8a%a8%e4%b8%8e%e5%88%9d%e5%a7%8b%e5%8c%96%e6%b5%81%e7%a8%8b" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%90%af%e5%8a%a8%e4%b8%8e%e5%88%9d%e5%a7%8b%e5%8c%96%e6%b5%81%e7%a8%8b" aria-label="锚点">#</a>
     </span>        
     
 </h3>
+<p>它是服务能否正常运行的基础，服务起不来什么事情都做不了。可以关注以下细节：
+启动类入口：确认服务启动类，确认启动类的扫描路径等等。
+启动依赖：必须成功连接的外部服务，如 MySQL、Redis、Kafka，甚至有时会检查外部服务是否启动。
+启动参数：启动参数有哪些，作用分别是什么，哪些参数是必填的。</p>
 
-<h3 class="relative group">[P0]Top1关键业务链路 
-    <div id="p0top1关键业务链路" class="anchor"></div>
+<h3 class="relative group">Top1关键业务链路 
+    <div id="top1关键业务链路" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p0top1%e5%85%b3%e9%94%ae%e4%b8%9a%e5%8a%a1%e9%93%be%e8%b7%af" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#top1%e5%85%b3%e9%94%ae%e4%b8%9a%e5%8a%a1%e9%93%be%e8%b7%af" aria-label="锚点">#</a>
     </span>        
     
 </h3>
+<p>这里不贪多，只需要确定当前服务关键Top1的接口是什么。
+了解Top1业务链路，能让让我们了解这个服务是做什么的，可以通过以下信息对整体业务有一个大概认知：
+明确参数意义：每个参数，都可能牵扯出一些业务逻辑。不需要深挖每个参数是怎么处理的，只需要明白参数背后的业务含义是什么。
+明确流程步骤：可以画一个流程图，最简单的链式就行。让我们对整体流程有一个大概了解。涉及的组件名称也要记录下来，方便跳转。可能要重点关注下一些if-else逻辑，比如编码在代码中的业务规则。
+明确外部交互：调用了哪些外部服务，使用了哪些外部中间件，都记下来。</p>
 
-<h3 class="relative group">[P1]配置系统 
-    <div id="p1配置系统" class="anchor"></div>
+<h3 class="relative group">配置系统 
+    <div id="配置系统" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p1%e9%85%8d%e7%bd%ae%e7%b3%bb%e7%bb%9f" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e9%85%8d%e7%bd%ae%e7%b3%bb%e7%bb%9f" aria-label="锚点">#</a>
     </span>        
     
 </h3>
+<p>配置错误是新人最易踩的坑（如环境错配、参数填错导致功能异常），需掌握配置从哪来、怎么生效、如何改。
+重点关注以下细节：
+配置加载来源与优先级：配置可能来源于本地配置文件（resource下yml、config下配置文件等等），外部配置中心（比如Apollo、Nacos等），甚至在某些其他仓库（比如Ceylon仓库等）。它们的优先级是怎样的，加载顺序会决定覆盖性。
+核心配置项：依次确认这些信息，端口、环境标识、日志级别。
+中间件配置项：先确认用了哪些中间件，然后定位到它们的配置在哪里。
+配置刷新机制：是热部署，还是需要重启服务。</p>
 
-<h3 class="relative group">[P1]Top5核心业务链路 
-    <div id="p1top5核心业务链路" class="anchor"></div>
+<h3 class="relative group">数据交互 
+    <div id="数据交互" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p1top5%e6%a0%b8%e5%bf%83%e4%b8%9a%e5%8a%a1%e9%93%be%e8%b7%af" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%95%b0%e6%8d%ae%e4%ba%a4%e4%ba%92" aria-label="锚点">#</a>
     </span>        
     
 </h3>
+<p>数据层交互：都用了哪些存储引擎，表都有哪些，它们都是做什么用的？
+缓存策略：是否使用了缓存，用了哪些缓存，key是怎么生成的，过期时间是怎样的。
+外部系统交互：都依赖了哪些外部服务，是怎么交互的（http、rpc、mq）；超时机制和重试机制；调用外部服务是为了获取什么信息？</p>
 
-<h3 class="relative group">[P2]数据交互 
-    <div id="p2数据交互" class="anchor"></div>
+<h3 class="relative group">异常机制 
+    <div id="异常机制" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p2%e6%95%b0%e6%8d%ae%e4%ba%a4%e4%ba%92" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%bc%82%e5%b8%b8%e6%9c%ba%e5%88%b6" aria-label="锚点">#</a>
     </span>        
     
 </h3>
+<p>异常处理流程：是否有全局异常处理器，像java里的@RestControllerAdvice类，明确哪些异常会被捕获并转化为特定响应；以及未捕获的异常，会发生什么，是否打印异常栈，是否返回默认错误页？
+熔断与降级：当外部服务不可用时，接口是否会熔断，触发熔断的配置是多少？当前服务负载过高时，是否有功能降级；核心功能是否有数量降级，比如控制返回数量。</p>
 
-<h3 class="relative group">[P2]异常机制 
-    <div id="p2异常机制" class="anchor"></div>
+<h3 class="relative group">监控/日志埋点 
+    <div id="监控日志埋点" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p2%e5%bc%82%e5%b8%b8%e6%9c%ba%e5%88%b6" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e7%9b%91%e6%8e%a7%e6%97%a5%e5%bf%97%e5%9f%8b%e7%82%b9" aria-label="锚点">#</a>
     </span>        
     
 </h3>
+<p>监控平台：各个环境的监控平台地址，尤其是线上环境，各个服务做成书签，方便随时监控。
+监控指标埋点：监控了哪些关键指标；当异常发生时，特定类型的异常应该看哪些指标；特定指标出现异常能反馈出什么问题。
+日志平台：各个环境的日志平台地址，尤其是线上平台。日志平台该怎么用，使用哪些关键字来做过滤。
+日志规范：有没有统一的日志记录工具；日志框架都能打印哪些参数；核心的日志输出点有哪些，比如代码出现问题，需要优先查看哪些日志；日志的使用级别有哪些。
+运维脚本：常用的比如tail -f agg.log等。</p>
 
-<h3 class="relative group">[P2]监控/日志埋点 
-    <div id="p2监控日志埋点" class="anchor"></div>
+<h2 class="relative group">从业务角度，优先关注哪些产品细节？ 
+    <div id="从业务角度优先关注哪些产品细节" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p2%e7%9b%91%e6%8e%a7%e6%97%a5%e5%bf%97%e5%9f%8b%e7%82%b9" aria-label="锚点">#</a>
-    </span>        
-    
-</h3>
-
-<h2 class="relative group">从业务角度，优先拿捏哪些产品细节？ 
-    <div id="从业务角度优先拿捏哪些产品细节" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e4%bb%8e%e4%b8%9a%e5%8a%a1%e8%a7%92%e5%ba%a6%e4%bc%98%e5%85%88%e6%8b%bf%e6%8d%8f%e5%93%aa%e4%ba%9b%e4%ba%a7%e5%93%81%e7%bb%86%e8%8a%82" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e4%bb%8e%e4%b8%9a%e5%8a%a1%e8%a7%92%e5%ba%a6%e4%bc%98%e5%85%88%e5%85%b3%e6%b3%a8%e5%93%aa%e4%ba%9b%e4%ba%a7%e5%93%81%e7%bb%86%e8%8a%82" aria-label="锚点">#</a>
     </span>        
     
 </h2>
 
-<h2 class="relative group">从团队风格角度，如何快速感知价值导向？ 
-    <div id="从团队风格角度如何快速感知价值导向" class="anchor"></div>
+<h3 class="relative group">核心业务流程 
+    <div id="核心业务流程" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e4%bb%8e%e5%9b%a2%e9%98%9f%e9%a3%8e%e6%a0%bc%e8%a7%92%e5%ba%a6%e5%a6%82%e4%bd%95%e5%bf%ab%e9%80%9f%e6%84%9f%e7%9f%a5%e4%bb%b7%e5%80%bc%e5%af%bc%e5%90%91" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e4%b8%9a%e5%8a%a1%e6%b5%81%e7%a8%8b" aria-label="锚点">#</a>
     </span>        
     
-</h2>
+</h3>
+<p>用户视角的高频主流程：比如浏览商品-&gt;加购-&gt;下单-&gt;支付-&gt;收货-&gt;售后全流程。可能服务只是这个环节的一小部分，但宏观链路至少简单了解一下。</p>
+
+<h3 class="relative group">异常业务流程 
+    <div id="异常业务流程" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e5%bc%82%e5%b8%b8%e4%b8%9a%e5%8a%a1%e6%b5%81%e7%a8%8b" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>用户视角的异常流程：比如库存不足时会怎样，支付超时后会怎样，秒杀没抢到会怎样。</p>
+
+<h3 class="relative group">核心业务指标 
+    <div id="核心业务指标" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e4%b8%9a%e5%8a%a1%e6%8c%87%e6%a0%87" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>交易类指标：电商金融使用的多，比如GMV（成交总额）、转化率（下单率 / 支付率）、客单价、复购率等等。对我们研发有什么用呢：</p>
+<ul>
+<li>优化结算流程的响应速度（如支付接口耗时 &lt; 200ms），减少用户流失；</li>
+<li>通过缓存策略提升大促期间商品详情页加载速度，间接提升转化率；</li>
+<li>监控交易链路的失败率（如支付失败率 &lt; 0.1%），避免直接损失。
+用户类指标：DAU（日活）、MAU（月活）、用户留存率（7 日留存）、人均使用时长等等。对我们研发有什么用呢：</li>
+<li>优化客户端启动速度（如冷启动 &lt; 1.5 秒），提升用户体验以增加使用时长；</li>
+<li>监控服务端接口错误率（如 5xx 错误率 &lt; 0.5%），避免因服务异常导致用户流失；</li>
+<li>通过技术手段支持 A/B 测试（如动态配置发布），快速验证功能对留存的影响。</li>
+</ul>
+
+<h3 class="relative group">核心体验指标 
+    <div id="核心体验指标" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%a0%b8%e5%bf%83%e4%bd%93%e9%aa%8c%e6%8c%87%e6%a0%87" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>性能指标：接口平均响应时间、99% 耗时（P99）、吞吐量（QPS）
+稳定性指标：服务可用性SLA、故障率、故障恢复时间MTTR</p>
+
+<h3 class="relative group">成本指标 
+    <div id="成本指标" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#%e6%88%90%e6%9c%ac%e6%8c%87%e6%a0%87" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+<p>我把指标放到了业务角度中，因为人力资源、机器资源会影响业务布局。如果我们是中小型企业或者创业团队，那么它是我们在做产品时需要格外关注的点。
+我认为关键的成本是人力成本、流量成本（买广告这些）、机器成本，不过这里先不展开讨论。</p>
 
           
           
