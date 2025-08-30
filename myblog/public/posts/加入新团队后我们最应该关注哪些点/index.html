@@ -140,7 +140,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1527"
+    "wordCount": "1590"
   }]
   </script>
 
@@ -822,9 +822,14 @@
     </li>
     <li><a href="#从服务角度优先摸透哪些关键实现">从服务角度，优先摸透哪些关键实现？</a>
       <ul>
+        <li><a href="#p0服务整体架构">[P0]服务整体架构</a></li>
         <li><a href="#p0启动与初始化流程">[P0]启动与初始化流程</a></li>
-        <li><a href="#p0top1核心业务链路">[P0]Top1核心业务链路</a></li>
-        <li><a href="#p1">[P1]</a></li>
+        <li><a href="#p0top1关键业务链路">[P0]Top1关键业务链路</a></li>
+        <li><a href="#p1配置系统">[P1]配置系统</a></li>
+        <li><a href="#p1top5核心业务链路">[P1]Top5核心业务链路</a></li>
+        <li><a href="#p2数据交互">[P2]数据交互</a></li>
+        <li><a href="#p2异常机制">[P2]异常机制</a></li>
+        <li><a href="#p2监控日志埋点">[P2]监控/日志埋点</a></li>
       </ul>
     </li>
     <li><a href="#从业务角度优先拿捏哪些产品细节">从业务角度，优先拿捏哪些产品细节？</a></li>
@@ -856,9 +861,14 @@
     </li>
     <li><a href="#从服务角度优先摸透哪些关键实现">从服务角度，优先摸透哪些关键实现？</a>
       <ul>
+        <li><a href="#p0服务整体架构">[P0]服务整体架构</a></li>
         <li><a href="#p0启动与初始化流程">[P0]启动与初始化流程</a></li>
-        <li><a href="#p0top1核心业务链路">[P0]Top1核心业务链路</a></li>
-        <li><a href="#p1">[P1]</a></li>
+        <li><a href="#p0top1关键业务链路">[P0]Top1关键业务链路</a></li>
+        <li><a href="#p1配置系统">[P1]配置系统</a></li>
+        <li><a href="#p1top5核心业务链路">[P1]Top5核心业务链路</a></li>
+        <li><a href="#p2数据交互">[P2]数据交互</a></li>
+        <li><a href="#p2异常机制">[P2]异常机制</a></li>
+        <li><a href="#p2监控日志埋点">[P2]监控/日志埋点</a></li>
       </ul>
     </li>
     <li><a href="#从业务角度优先拿捏哪些产品细节">从业务角度，优先拿捏哪些产品细节？</a></li>
@@ -1130,6 +1140,16 @@
     
 </h2>
 
+<h3 class="relative group">[P0]服务整体架构 
+    <div id="p0服务整体架构" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p0%e6%9c%8d%e5%8a%a1%e6%95%b4%e4%bd%93%e6%9e%b6%e6%9e%84" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
 <h3 class="relative group">[P0]启动与初始化流程 
     <div id="p0启动与初始化流程" class="anchor"></div>
     
@@ -1140,22 +1160,62 @@
     
 </h3>
 
-<h3 class="relative group">[P0]Top1核心业务链路 
-    <div id="p0top1核心业务链路" class="anchor"></div>
+<h3 class="relative group">[P0]Top1关键业务链路 
+    <div id="p0top1关键业务链路" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p0top1%e6%a0%b8%e5%bf%83%e4%b8%9a%e5%8a%a1%e9%93%be%e8%b7%af" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p0top1%e5%85%b3%e9%94%ae%e4%b8%9a%e5%8a%a1%e9%93%be%e8%b7%af" aria-label="锚点">#</a>
     </span>        
     
 </h3>
 
-<h3 class="relative group">[P1] 
-    <div id="p1" class="anchor"></div>
+<h3 class="relative group">[P1]配置系统 
+    <div id="p1配置系统" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p1" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p1%e9%85%8d%e7%bd%ae%e7%b3%bb%e7%bb%9f" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+<h3 class="relative group">[P1]Top5核心业务链路 
+    <div id="p1top5核心业务链路" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p1top5%e6%a0%b8%e5%bf%83%e4%b8%9a%e5%8a%a1%e9%93%be%e8%b7%af" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+<h3 class="relative group">[P2]数据交互 
+    <div id="p2数据交互" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p2%e6%95%b0%e6%8d%ae%e4%ba%a4%e4%ba%92" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+<h3 class="relative group">[P2]异常机制 
+    <div id="p2异常机制" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p2%e5%bc%82%e5%b8%b8%e6%9c%ba%e5%88%b6" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
+
+<h3 class="relative group">[P2]监控/日志埋点 
+    <div id="p2监控日志埋点" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#p2%e7%9b%91%e6%8e%a7%e6%97%a5%e5%bf%97%e5%9f%8b%e7%82%b9" aria-label="锚点">#</a>
     </span>        
     
 </h3>
