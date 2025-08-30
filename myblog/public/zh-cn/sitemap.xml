@@ -3,8 +3,20 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2025-08-28T21:01:22+08:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/%E5%8A%A0%E5%85%A5%E6%96%B0%E5%9B%A2%E9%98%9F%E5%90%8E%E6%88%91%E4%BB%AC%E6%9C%80%E5%BA%94%E8%AF%A5%E5%85%B3%E6%B3%A8%E5%93%AA%E4%BA%9B%E7%82%B9/</loc>
+    <lastmod>2025-08-28T21:01:22+08:00</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-08-27T23:37:54+08:00</lastmod>
+    <lastmod>2025-08-28T21:01:22+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -29,19 +41,7 @@
     />
   </url>
   <url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2025-08-27T23:37:54+08:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>http://localhost:1313/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/</loc>
-    <lastmod>2025-08-27T23:37:54+08:00</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/posts/my-first-post/</loc>
     <lastmod>2025-08-26T23:37:54+08:00</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>

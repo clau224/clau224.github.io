@@ -2,10 +2,14 @@
 {{ $recentArticles = .Site.Params.homepage.showRecentItems }}
 
 
-<section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-  {{ range first $recentArticles (.Paginate (where .Site.RegularPages "Type" "in"
-    .Site.Params.mainSections)).Pages
-  }}
-    {{ partial "article-link/card.html" . }}
-  {{ end }}
+<section class="w-full overflow-x-auto">
+  <div class="flex gap-4 pr-4">
+    {{ range first $recentArticles (.Paginate (where .Site.RegularPages "Type" "in"
+      .Site.Params.mainSections)).Pages
+    }}
+      <div class="min-w-[280px] max-w-[320px] flex-shrink-0">
+        {{ partial "article-link/card.html" . }}
+      </div>
+    {{ end }}
+  </div>
 </section>
