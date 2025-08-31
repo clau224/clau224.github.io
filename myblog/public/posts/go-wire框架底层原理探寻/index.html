@@ -140,7 +140,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2959"
+    "wordCount": "2946"
   }]
   </script>
 
@@ -818,8 +818,12 @@
       </ul>
     </li>
     <li><a href="#3-wire框架的设计理念的优劣势">3 Wire框架的设计理念的优劣势</a></li>
-    <li><a href="#4-provider_gengo是做啥的">4. provider_gen.go是做啥的？</a></li>
-    <li><a href="#5-digo是做啥的">5. di.go是做啥的？</a></li>
+    <li><a href="#4-那些由wire衍生出的文件们">4. 那些由Wire衍生出的文件们</a>
+      <ul>
+        <li><a href="#41-provider_gengo">4.1 provider_gen.go</a></li>
+        <li><a href="#42-digo">4.2 di.go</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -843,8 +847,12 @@
       </ul>
     </li>
     <li><a href="#3-wire框架的设计理念的优劣势">3 Wire框架的设计理念的优劣势</a></li>
-    <li><a href="#4-provider_gengo是做啥的">4. provider_gen.go是做啥的？</a></li>
-    <li><a href="#5-digo是做啥的">5. di.go是做啥的？</a></li>
+    <li><a href="#4-那些由wire衍生出的文件们">4. 那些由Wire衍生出的文件们</a>
+      <ul>
+        <li><a href="#41-provider_gengo">4.1 provider_gen.go</a></li>
+        <li><a href="#42-digo">4.2 di.go</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -981,9 +989,10 @@
     
 </h2>
 <p>在从Java转向Go后，有一个我比较迷惑的点，为什么我在编译时，会自动生成wire_gen文件和gen_provider文件，多了一道工序，它有什么用呢？</p>
-<p>因为，这与我之前Java使用的Spring容器似乎不太一样，Spring容器是动过类加载的方式，加载并通过反射来实例化出各个bean的，所有的依赖都是自动注入，非常方便。而Go的Wire框架，看起来要先通过像是静态编译的方式，通过go generate来收集组件都依赖了哪些其他组件，然后再对各组件进行实例化。</p>
-<p>当然，这些都是我的推测，Wire框架它对我是一个黑盒。这导致我在使用Wire框架时不够熟练，比如我要删除一个组件，那么我应该更改哪些配置文件，应该重新执行哪些指令，来自动生成哪些文件。那么这篇blog，我就是想从底层原理出发，对Wire框架产生一个详细的认知。毕竟“工欲善其事，必先利其器”嘛！</p>
-<p>那么，让我们开始吧。</p>
+<p>因为，这与我之前Java使用的Spring容器似乎不太一样，Spring容器是动过类加载的方式，加载并通过反射来实例化出各个bean的，所有的依赖都是自动注入，非常方便。而Go的Wire框架，看起来要先通过像是静态编译的方式，通过执行指令来收集组件都依赖了哪些其他组件，然后再对各组件进行实例化。</p>
+<p>当然，这些都是我的推测，Wire框架目前对我是一个黑盒。这导致我在使用Wire框架时不够熟练，比如我要删除一个组件，那么我应该更改哪些配置文件，应该重新执行哪些指令，来自动生成哪些文件。</p>
+<p>那么这篇blog，我就是想从底层原理出发，对Wire框架产生一个详细的认知。毕竟“工欲善其事，必先利其器”嘛！
+让我们开始吧。</p>
 
 <h2 class="relative group">2. Wire框架是否能类比成Spring框架？ 
     <div id="2-wire框架是否能类比成spring框架" class="anchor"></div>
@@ -1054,11 +1063,10 @@
     </span>        
     
 </h3>
-<p>分析完上面三点后，我有个大大的问题，Wire框架中某组件被多次注入到不同组件的时候，每次都是通过Provider创建出一个新对象么？</p>
-<p>因为对于Java，它持有了一个运行时容器BeanFactory，所有的Bean都往里面注入，随用随取，BeanFactory管理了所有Spring Bean的生命周期。整体采用单例的设计模式。</p>
-<p>然后我调研了一下Wire框架，它没有任何容器的概念，或者说，Wire框架只是作用于编译阶段，到运行阶段后它就“消失”了。
-那么，回到开始的问题，在编译阶段，每次注入某组件时，都会调用Provider方法吗？是的，如果不做特殊处理，那么Wire注入的组件是多例。
-官方对此也有说明：</p>
+<p>对于Java，它持有了一个运行时容器BeanFactory，所有的Bean都往里面注入，随用随取，BeanFactory管理了所有Spring Bean的生命周期。整体采用单例的设计模式。</p>
+<p>但对于Wire容器，分析完上面三点后，我有个大大的问题，Wire框架中某组件被多次注入到不同组件的时候，每次都是通过Provider创建出一个新对象么？</p>
+<p>然后我调研了一下Wire框架，它没有任何容器的概念，或者说，Wire框架只是作用于编译阶段，到运行阶段后它就“消失”了。那么，回到上面的问题，在编译阶段，每次注入某组件时，都会调用Provider方法。换句话说，如果不做特殊处理，那么Wire注入的组件是多例。</p>
+<p>官方对此也有说明：</p>
 <blockquote>
 <p>(Reference <a
   href="https://github.com/google/wire/blob/main/docs/guide.md"
@@ -1089,17 +1097,27 @@ Providers are just functions. They can be simple constructors, or they can have 
 <li>灵活性比较差，因为依赖关系都是固定死的，有时需要根据环境进行动态注册，Wire是支持不了的，而Spring可以通过@Conditional来实现。</li>
 </ol>
 <p>到这为止，我可以给Wire框架下一个定义了：</p>
-<p><strong>Wire就是一个DI框架，只负责如何组装依赖以及做依赖注入代码的生成，像Spring的IOC、AOP这些能力是不支持的。</strong></p>
+<p><strong>Wire就是一个DI框架，只负责依赖识别以及做依赖注入代码的生成，像Spring的IOC、AOP这些能力是不支持的。</strong></p>
 
-<h2 class="relative group">4. provider_gen.go是做啥的？ 
-    <div id="4-provider_gengo是做啥的" class="anchor"></div>
+<h2 class="relative group">4. 那些由Wire衍生出的文件们 
+    <div id="4-那些由wire衍生出的文件们" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#4-provider_gengo%e6%98%af%e5%81%9a%e5%95%a5%e7%9a%84" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#4-%e9%82%a3%e4%ba%9b%e7%94%b1wire%e8%a1%8d%e7%94%9f%e5%87%ba%e7%9a%84%e6%96%87%e4%bb%b6%e4%bb%ac" aria-label="锚点">#</a>
     </span>        
     
 </h2>
+
+<h3 class="relative group">4.1 provider_gen.go 
+    <div id="41-provider_gengo" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#41-provider_gengo" aria-label="锚点">#</a>
+    </span>        
+    
+</h3>
 <p>我在团队项目下，发现provider_gen.go文件，看名字并不是手写。它是怎么生成的？为了解决什么问题？</p>
 <p>首先，它并不是wire框架生成的，而是利用go generate工具链生成的。这实际上是Go一个最佳实践，针对项目中大量重复且功能一致的对象，可以通过模版的方式批量创建。比如，针对DAO层的对象，其模版可以是——</p>
 <pre tabindex="0"><code>// 模板：dao_provider.tpl
@@ -1115,15 +1133,15 @@ func New{{.Name}}DAO(db *db.DB) *{{.Name}}DAO {
 }
 </code></pre><p>其实就是一个简化操作的作用。当我们创建好了模版，并指定了使用该模版的对象，使用go generate就能一键生成Provider方法，这些方法的实现会被放置到provider_gen.go中。</p>
 
-<h2 class="relative group">5. di.go是做啥的？ 
-    <div id="5-digo是做啥的" class="anchor"></div>
+<h3 class="relative group">4.2 di.go 
+    <div id="42-digo" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100 select-none">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#5-digo%e6%98%af%e5%81%9a%e5%95%a5%e7%9a%84" aria-label="锚点">#</a>
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#42-digo" aria-label="锚点">#</a>
     </span>        
     
-</h2>
+</h3>
 <p>同样的，在团队项目下，也发现了di.go文件，它是怎么生成的呢？
 我们在Go项目中往往会定义一个InitializeXXX的注入函数，并使用 wire.Build 函数指定需要组合的 Provider。当我们执行Wire工具，就会自动生成di.go，具体流程是这样的：</p>
 <ul>
