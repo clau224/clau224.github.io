@@ -1,0 +1,24 @@
+# Hugo
+myblog/public/
+myblog/resources/_gen/
+myblog/assets/jsconfig.json
+myblog/hugo_stats.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Hugo
+.hugo_build.lock
