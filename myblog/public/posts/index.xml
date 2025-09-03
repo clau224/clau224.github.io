@@ -2,49 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 嘉味小馆</title>
-    <link>https://clau224.github.io/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on 嘉味小馆</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>© 2025 Cavin Lau</copyright>
-    <lastBuildDate>Sat, 30 Aug 2025 20:56:01 +0800</lastBuildDate><atom:link href="https://clau224.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Sep 2025 19:38:52 +0800</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Go究竟是怎么做包管理的</title>
+      <link>http://localhost:1313/posts/go%E7%A9%B6%E7%AB%9F%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%8C%85%E7%AE%A1%E7%90%86%E7%9A%84/</link>
+      <pubDate>Tue, 02 Sep 2025 19:38:52 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/go%E7%A9%B6%E7%AB%9F%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%8C%85%E7%AE%A1%E7%90%86%E7%9A%84/</guid>
+      <description>在从Java转入Go后，让我感到非常爽的一点在于Go的依赖包管理。这让我对Go Module感到好奇&amp;hellip;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/go%E7%A9%B6%E7%AB%9F%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%8C%85%E7%AE%A1%E7%90%86%E7%9A%84/cover.jpg" />
+    </item>
     
     <item>
       <title>Golang Wire框架 底层原理探寻</title>
-      <link>https://clau224.github.io/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/</link>
+      <link>http://localhost:1313/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/</link>
       <pubDate>Sat, 30 Aug 2025 20:56:01 +0800</pubDate>
       
-      <guid>https://clau224.github.io/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/</guid>
+      <guid>http://localhost:1313/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/</guid>
       <description>在我从Java转向Go后，一直迷惑于Wire框架的作用，看起来它和Spring框架功能相似，它是怎么work起来的呢？</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://clau224.github.io/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/cover.jpg" />
     </item>
     
     <item>
       <title>加入新团队后，我们最应该关注哪些点？</title>
-      <link>https://clau224.github.io/posts/%E5%8A%A0%E5%85%A5%E6%96%B0%E5%9B%A2%E9%98%9F%E5%90%8E%E6%88%91%E4%BB%AC%E6%9C%80%E5%BA%94%E8%AF%A5%E5%85%B3%E6%B3%A8%E5%93%AA%E4%BA%9B%E7%82%B9/</link>
+      <link>http://localhost:1313/posts/%E5%8A%A0%E5%85%A5%E6%96%B0%E5%9B%A2%E9%98%9F%E5%90%8E%E6%88%91%E4%BB%AC%E6%9C%80%E5%BA%94%E8%AF%A5%E5%85%B3%E6%B3%A8%E5%93%AA%E4%BA%9B%E7%82%B9/</link>
       <pubDate>Thu, 28 Aug 2025 21:01:22 +0800</pubDate>
       
-      <guid>https://clau224.github.io/posts/%E5%8A%A0%E5%85%A5%E6%96%B0%E5%9B%A2%E9%98%9F%E5%90%8E%E6%88%91%E4%BB%AC%E6%9C%80%E5%BA%94%E8%AF%A5%E5%85%B3%E6%B3%A8%E5%93%AA%E4%BA%9B%E7%82%B9/</guid>
+      <guid>http://localhost:1313/posts/%E5%8A%A0%E5%85%A5%E6%96%B0%E5%9B%A2%E9%98%9F%E5%90%8E%E6%88%91%E4%BB%AC%E6%9C%80%E5%BA%94%E8%AF%A5%E5%85%B3%E6%B3%A8%E5%93%AA%E4%BA%9B%E7%82%B9/</guid>
       <description>加入新团队后，陌生的技术栈和工具是否影响日常研发效率呢？我正在经历这种苦恼。我在想，能否梳理一套核心的待确认点，专业且高效地一步问到位&amp;hellip;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://clau224.github.io/posts/%E5%8A%A0%E5%85%A5%E6%96%B0%E5%9B%A2%E9%98%9F%E5%90%8E%E6%88%91%E4%BB%AC%E6%9C%80%E5%BA%94%E8%AF%A5%E5%85%B3%E6%B3%A8%E5%93%AA%E4%BA%9B%E7%82%B9/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/%E5%8A%A0%E5%85%A5%E6%96%B0%E5%9B%A2%E9%98%9F%E5%90%8E%E6%88%91%E4%BB%AC%E6%9C%80%E5%BA%94%E8%AF%A5%E5%85%B3%E6%B3%A8%E5%93%AA%E4%BA%9B%E7%82%B9/cover.jpg" />
     </item>
     
     <item>
       <title>做技术选型时，我们该如何评估中间件？</title>
-      <link>https://clau224.github.io/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/</link>
+      <link>http://localhost:1313/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/</link>
       <pubDate>Tue, 26 Aug 2025 23:37:54 +0800</pubDate>
       
-      <guid>https://clau224.github.io/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/</guid>
+      <guid>http://localhost:1313/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/</guid>
       <description>在最近，我负责了一个多路召回的技术设计，主要对Milvus做了技术选型和评估，但部分过程与结论不被团队所认可。这也让我开始思考一个问题&amp;hellip;</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://clau224.github.io/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/cover.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/%E5%81%9A%E6%8A%80%E6%9C%AF%E9%80%89%E5%9E%8B%E6%97%B6%E6%88%91%E4%BB%AC%E8%AF%A5%E5%A6%82%E4%BD%95%E8%AF%84%E4%BC%B0%E4%B8%AD%E9%97%B4%E4%BB%B6/cover.jpg" />
     </item>
     
     <item>
       <title></title>
-      <link>https://clau224.github.io/posts/1%E4%B8%9A%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8E%E5%8F%AC%E5%9B%9E%E7%B3%BB%E7%BB%9F%E4%BB%B7%E5%80%BC/</link>
+      <link>http://localhost:1313/posts/1%E4%B8%9A%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8E%E5%8F%AC%E5%9B%9E%E7%B3%BB%E7%BB%9F%E4%BB%B7%E5%80%BC/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://clau224.github.io/posts/1%E4%B8%9A%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8E%E5%8F%AC%E5%9B%9E%E7%B3%BB%E7%BB%9F%E4%BB%B7%E5%80%BC/</guid>
+      <guid>http://localhost:1313/posts/1%E4%B8%9A%E5%8A%A1%E8%83%8C%E6%99%AF%E4%B8%8E%E5%8F%AC%E5%9B%9E%E7%B3%BB%E7%BB%9F%E4%BB%B7%E5%80%BC/</guid>
       <description>&lt;p&gt;在加入LineMan之后，我负责的是多路召回这部分。多路召回是干啥的呢？简单来说，当我们打开类似美团的外卖app，在无关键字检索的情况下，首页需要展示推荐餐厅。那么，都展示哪些餐厅呢，凭什么把它们展示出来呢？这就涉及到多路召回的逻辑了。&lt;/p&gt;</description>
       
     </item>
