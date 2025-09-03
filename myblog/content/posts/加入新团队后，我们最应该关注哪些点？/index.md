@@ -147,3 +147,8 @@ summary = '加入新团队后，陌生的技术栈和工具是否影响日常研
 
 我认为关键的成本是人力成本、流量成本（买广告这些）、机器成本，不过这里先不展开讨论了。
 
+
+<div style="text-align: right; margin-top: 2em; font-style: italic; color: #666;">
+  2025年08月30日 14点01分<br>
+  于 大连·柏悦国际
+</div>

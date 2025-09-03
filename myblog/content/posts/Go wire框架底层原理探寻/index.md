@@ -119,3 +119,7 @@ func New{{.Name}}DAO(db *db.DB) *{{.Name}}DAO {
 这里，InitializeXXX往往会变大很多，因为它会增加底层的依赖的provider调用。
 
 
+<div style="text-align: right; margin-top: 2em; font-style: italic; color: #666;">
+  2025年08月31日 17点21分<br>
+  于 大连·伯川图书馆
+</div>
