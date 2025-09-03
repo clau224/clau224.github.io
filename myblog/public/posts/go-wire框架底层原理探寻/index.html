@@ -140,7 +140,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "2946"
+    "wordCount": "2938"
   }]
   </script>
 
@@ -1064,8 +1064,9 @@
     
 </h3>
 <p>对于Java，它持有了一个运行时容器BeanFactory，所有的Bean都往里面注入，随用随取，BeanFactory管理了所有Spring Bean的生命周期。整体采用单例的设计模式。</p>
+<p>然后我调研了一下Wire框架，它没有任何容器的概念，或者说，Wire框架只是作用于编译阶段，到运行阶段后它就“消失”了。</p>
 <p>但对于Wire容器，分析完上面三点后，我有个大大的问题，Wire框架中某组件被多次注入到不同组件的时候，每次都是通过Provider创建出一个新对象么？</p>
-<p>然后我调研了一下Wire框架，它没有任何容器的概念，或者说，Wire框架只是作用于编译阶段，到运行阶段后它就“消失”了。那么，回到上面的问题，在编译阶段，每次注入某组件时，都会调用Provider方法。换句话说，如果不做特殊处理，那么Wire注入的组件是多例。</p>
+<p>是的，在编译阶段，每次注入某组件时，都会调用Provider方法。换句话说，如果不做特殊处理，那么Wire注入的组件是多例。</p>
 <p>官方对此也有说明：</p>
 <blockquote>
 <p>(Reference <a
@@ -1592,10 +1593,10 @@ func New{{.Name}}DAO(db *db.DB) *{{.Name}}DAO {
         </span>
         <span>
           
-            <a class="flex text-right group ml-3" href="/posts/go%E7%A9%B6%E7%AB%9F%E6%98%AF%E6%80%8E%E4%B9%88%E5%81%9A%E5%8C%85%E7%AE%A1%E7%90%86%E7%9A%84/">
+            <a class="flex text-right group ml-3" href="/posts/%E5%8D%81%E5%B9%B4%E4%B9%8B%E5%90%8E%E9%9B%A8%E8%90%BD%E9%9D%92%E8%A1%BF/">
               <span class="flex flex-col">
                 <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Go究竟是怎么做包管理的</span
+                  >十年之后，雨落青衿</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   

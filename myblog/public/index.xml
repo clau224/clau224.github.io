@@ -20,6 +20,16 @@
     </item>
     
     <item>
+      <title>十年之后，雨落青衿</title>
+      <link>http://localhost:1313/posts/%E5%8D%81%E5%B9%B4%E4%B9%8B%E5%90%8E%E9%9B%A8%E8%90%BD%E9%9D%92%E8%A1%BF/</link>
+      <pubDate>Mon, 01 Sep 2025 01:02:19 +0800</pubDate>
+      
+      <guid>http://localhost:1313/posts/%E5%8D%81%E5%B9%B4%E4%B9%8B%E5%90%8E%E9%9B%A8%E8%90%BD%E9%9D%92%E8%A1%BF/</guid>
+      <description>八月末的大连，裹着一层蒙蒙细雨。我撑着伞站在伯川图书馆的门口，恍惚间像穿过了时光的褶皱&amp;hellip;&amp;hellip;</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/%E5%8D%81%E5%B9%B4%E4%B9%8B%E5%90%8E%E9%9B%A8%E8%90%BD%E9%9D%92%E8%A1%BF/cover.jpg" />
+    </item>
+    
+    <item>
       <title>Golang Wire框架 底层原理探寻</title>
       <link>http://localhost:1313/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/</link>
       <pubDate>Sat, 30 Aug 2025 20:56:01 +0800</pubDate>
