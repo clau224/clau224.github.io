@@ -4,7 +4,7 @@
 date = '2025-08-30T20:56:01+08:00'
 draft = false
 title = 'Golang Wire框架 底层原理探寻'
-summary = '在我从Java转向Go后，一直迷惑于Wire框架的作用，看起来它和Spring框架功能相似，它是怎么work起来的呢？'
+summary = '我从Java转向Go后，一直迷惑于Wire框架的作用，看起来它和Spring框架功能相似，它是怎么work起来的呢？'
 
 
 +++

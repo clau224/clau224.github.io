@@ -35,7 +35,7 @@
       <pubDate>Sat, 30 Aug 2025 20:56:01 +0800</pubDate>
       
       <guid>http://localhost:1313/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/</guid>
-      <description>在我从Java转向Go后，一直迷惑于Wire框架的作用，看起来它和Spring框架功能相似，它是怎么work起来的呢？</description>
+      <description>我从Java转向Go后，一直迷惑于Wire框架的作用，看起来它和Spring框架功能相似，它是怎么work起来的呢？</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/go-wire%E6%A1%86%E6%9E%B6%E5%BA%95%E5%B1%82%E5%8E%9F%E7%90%86%E6%8E%A2%E5%AF%BB/cover.jpg" />
     </item>
     
